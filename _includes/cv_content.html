@@ -6,19 +6,25 @@
   <meta name="description" content="{{ site.name }}'s CV" />
   <link href="{{ site.baseurl }}/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="{{ site.baseurl }}/assets/css/cv.css" rel="stylesheet">
-  
+
 </head>
 
 <div class="cv-container">
   <div class="row cv-masthead cv-section">
-    <div class="col-xs-12 col-sm-6">
-      <h1 class="cv-name">{{ site.data.cv.name }}</h1>
-      <span class="profession">{{ site.data.cv.description }}</span>
-    </div>
-    <div class="col-xs-12 col-sm-6">
-      <ul class="list-unstyled cv-contacts">
+    <div class="col-xs-6 col-sm-6">
+      <ul class="list-unstyled" style="margin-bottom: 0">
         <li>
-          <a href="mailto:{{ site.data.cv.email }}">{{site.data.cv.email }}</a>
+          <h1 class="cv-name">{{ site.data.cv.name }}</h1>
+        </li>
+        <li>
+          <span class="profession"><i>{{ site.data.cv.description }}</i></span>
+        </li>
+      </ul>
+    </div>
+    <div class="col-xs-6 col-sm-6">
+      <ul class="list-unstyled cv-contacts" style="text-align: right;">
+        <li>
+          <a href="mailto:{{ site.data.cv.email }}">{{ site.data.cv.email }}</a>
         </li>
         <li>
           <a href="https://{{ site.data.cv.url }}">https://{{ site.data.cv.url }}</a>
@@ -43,13 +49,13 @@
 
       {% for item in site.data.cv.education %}
         <div class="row">
-          <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-6 col-sm-6">
             {% for degree in item.degrees %}
               <h3>{{ degree }}</h3>
             {% endfor %}
             <i>{{ item.school }}</i>
           </div>
-          <div class="col-xs-12 col-sm-6 cv-dates-and-loc">
+          <div class="col-xs-6 col-sm-6 cv-dates-and-loc" style="text-align: right;">
             {% for dates in item.dates %}
               <h5><span class="avoidwrap">{{ dates.start }}</span>
               <span class="avoidwrap">– {{ dates.end }}</span></h5>
@@ -139,11 +145,11 @@
     <div class="col-xs-12">
       {% for item in site.data.cv.experience %}
         <div class="row">
-          <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-6 col-sm-6">
             <h3>{{ item.position }}</h3>
             <i>{{item.company}}</i>
           </div>
-          <div class="col-xs-12 col-sm-6 cv-dates-and-loc">
+          <div class="col-xs-6 col-sm-6 cv-dates-and-loc" style="text-align: right;">
             <h5><span class="avoidwrap">{{ item.start_date }}</span>
             <span class="avoidwrap">– {{ item.end_date }}</span></h5>
             <i>{{ item.location }}</i>
@@ -169,11 +175,11 @@
     <div class="col-xs-12">
       {% for item in site.data.cv.teaching %}
         <div class="row">
-          <div class="col-xs-12 col-sm-6">
+          <div class="col-xs-6 col-sm-6">
             <h3>{{ item.position }}</h3>
             <i>{{ item.institution }}</i>
           </div>
-          <div class="col-xs-12 col-sm-6 cv-dates-and-loc">
+          <div class="col-xs-6 col-sm-6 cv-dates-and-loc" style="text-align: right;">
             <h5><span class="avoidwrap">{{ item.start_date }}</span>
             <span class="avoidwrap">– {{ item.end_date }}</span></h5>
             <i>{{ item.location }}</i>
@@ -192,76 +198,4 @@
     </div>
   </div>
 
-
-  <!-- <div class="row section pagebreakishere">
-    <div class="row">
-      <div class="col-xs-12">
-        <h2 class="section-header">Technical Skills</h2>
-      </div>
-    </div>
-    <div class="col-xs-12">
-      <div class="row">
-       <div class="col-xs-4">
-
-         <h4 class="techSkillHeader"><i class="fa fa-terminal"></i> Backend</h4>
-          {% for item in site.data.cv.technicalSkills.backend %} {{item.name}}
-        <div class="progress">
-          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{item.level}}%"></div>
-        </div>
-        {% endfor %}
-      </div>
-      <div class="col-xs-4">
-        <h4 class="techSkillHeader"><i class="fa fa-code"></i> Frontend</h4> {% for item in site.data.cv.technicalSkills.frontend %} {{item.name}}
-        <div class="progress">
-          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{item.level}}%"></div>
-        </div>
-        {% endfor %}
-      </div>
-      <div class="col-xs-4">
-        <h4 class="techSkillHeader"><i class="fa fa-cogs"></i> Other</h4> {% for item in site.data.cv.technicalSkills.other %} {{item.name}}
-        <div class="progress">
-          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{item.level}}%"></div>
-        </div>
-        {% endfor %}
-      </div>
-      </div>
-      <div>
-        <h4><i class="fa fa-male"></i> Key competencies:</h4>
-      <ul>
-        {% for item in site.data.cv.technicalSkills.list %}
-          <li>{{item.tr}}</li>
-        {% endfor %}
-      </ul>
-
-          </div>
-    </div>
-  </div> -->
-
-
-  <!-- <div class="row  section section-border">
-    <div class="row">
-      <div class="col-xs-12">
-        <h2  class="section-header">Side Projects</h2>
-      </div>
-    </div>
-    <div class="col-xs-12">
-      {% for item in site.data.cv.sideProjects %}
-      <div class="row side-project">
-        <div class="col-xs-5">
-          <h4>
-          {% if item.type == 'github' %}
-              <i class="fa fa-github"></i>
-            {% elsif item.type == 'site' %}
-              <i class="fa fa-globe"></i>
-            {% endif %}
-            <a href="{{item.link}}">{{item.name}}</a>
-          </h4>
-
-          <h5>{{item.langs}}</h5>
-        </div>
-        <div class="col-xs-7">{{item.description}}</div>
-      </div>
-      {% endfor %}
-    </div>
-  </div> -->
 </div>
