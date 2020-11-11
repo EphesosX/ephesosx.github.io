@@ -4,7 +4,7 @@ title: Research
 published: true
 ---
 
-My research interests include subgraph isomorphism, network science, iterative linear system solvers, machine learning, and image processing.
+My research interests include subgraph matching, network science, iterative linear system solvers, machine learning, autonomous systems, and image processing.
 
 ###### Publications
 
