@@ -1,3 +1,29 @@
+- title: Inexact Attributed Subgraph Matching
+  venue: "Proc. GTA³ 4.0: The 4th workshop on Graph Techniques for Adversarial Activity Analytics, IEEE International Conference on Big Data, Atlanta, GA, Dec. 2020. (to appear)"
+  url: 2020ieeebigdatainexact.pdf
+  my_name: Thomas K. Tu
+  authors: 
+  - Thomas K. Tu
+  - Jacob D. Moorman
+  - Dominic Yang
+  - Qinyi Chen
+  - Andrea L. Bertozzi
+- title: Fault-tolerant Subgraph Matching on Aligned Networks
+  venue: "Proc. GTA³ 4.0: The 4th workshop on Graph Techniques for Adversarial Activity Analytics, IEEE International Conference on Big Data, Atlanta, GA, Dec. 2020. (to appear)"
+  url: 2020ieeebigdatamergeerrors.pdf
+  my_name: Thomas K. Tu
+  authors: 
+  - Thomas K. Tu
+  - Dominic Yang
+- title: Randomized Kaczmarz with Averaging
+  venue: "BIT Numerical Mathematics, Aug. 2020."
+  url: 2020bit.pdf
+  my_name: Thomas K. Tu
+  authors: 
+  - Jacob D. Moorman
+  - Thomas K. Tu
+  - Denali Molitor
+  - Deanna Needell
 - title: Randomized Kaczmarz with Averaging
   venue: "Proc. Information Theory and Applications Workshop, La Jolla, CA, Feb. 2019."
   url: 2019ita.pdf
